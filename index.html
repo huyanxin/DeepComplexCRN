@@ -1,0 +1,227 @@
+<html>
+  <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title>DCCRN: Deep Complex Convolution Recurrent Network for Phase-Aware Speech Enhancement</title>
+    <link rel="stylesheet" type="text/css" href="./stylesheets/github-light.css">
+  </head>
+  <body>
+    <article>
+      <header>
+        <h1>Samples from "DCCRN: Deep Complex Convolution Recurrent Network for Phase-Aware Speech Enhancement</h1>
+      </header>
+    </article>
+
+    <div><b>Authors:</b> Yanxin Hu, Yun Liu, Shubo Lv, Mengtao Xing, Shimin Zhang,Yihui Fu, Jian Wu, Bihong Zhang, Lei Xie</div>
+  
+  <h2>Part1: simulated WSJ0 and MUSAN data</h2> 
+
+  <style type="text/css">
+  .tg  {border-collapse:collapse;border-spacing:0;}
+  .tg td{border-bottom-width:1px;border-color:black;border-style:solid;border-top-width:1px;border-width:0px;
+    font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;word-break:normal;}
+  .tg th{border-bottom-width:1px;border-color:black;border-style:solid;border-top-width:1px;border-width:0px;
+    font-family:Arial, sans-serif;font-size:14px;font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+  .tg .tg-c3ow{border-color:inherit;font-weight:bold;text-align:center;vertical-align:top}
+  .tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
+  .tg .tg-pcvp{border-color:inherit;text-align:left;vertical-align:top}
+  .tg .tg-ihkz{border-color:inherit;text-align:center;vertical-align:top}
+  .tg .tg-7kms{border-color:inherit;font-family:Arial, Helvetica, sans-serif !important;;text-align:center;vertical-align:top}
+
+  </style>
+<table class="tg" style="undefined;table-layout: fixed; width: 493px">
+<colgroup>
+<col style="width: 85px">
+<col style="width: 300px">
+<col style="width: 300px">
+<col style="width: 300px">
+<col style="width: 300px">
+<col style="width: 300px">
+</colgroup>
+<thead>
+  <tr>
+    <th class="tg-c3ow">Model</th>
+    <th class="tg-c3ow">0db</th>
+    <th class="tg-c3ow">5db</th>
+    <th class="tg-c3ow">10db</th>
+    <th class="tg-c3ow">15db</th>
+    <th class="tg-c3ow">20db</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="tg-pcvp">Noisy</td>
+    <td class="tg-ihkz"><audio controls=""><source src="./samples/wsj/noisy/0/0.wav"></audio></td>
+    <td class="tg-ihkz"><audio controls=""><source src="./samples/wsj/noisy/5/0.wav"></audio></td>
+    <td class="tg-ihkz"><audio controls=""><source src="./samples/wsj/noisy/10/0.wav"></audio></td>
+    <td class="tg-ihkz"><audio controls=""><source src="./samples/wsj/noisy/15/0.wav"></audio></td>
+    <td class="tg-ihkz"><audio controls=""><source src="./samples/wsj/noisy/20/0.wav"></audio></td>
+
+  </tr>
+  <tr>
+    <td class="tg-0pky">Clean</td>
+    <td class="tg-ihkz"><audio controls=""><source src="./samples/wsj/clean/0/0.wav"></audio></td>
+    <td class="tg-ihkz"><audio controls=""><source src="./samples/wsj/clean/5/0.wav"></audio></td>
+    <td class="tg-ihkz"><audio controls=""><source src="./samples/wsj/clean/10/0.wav"></audio></td>
+    <td class="tg-ihkz"><audio controls=""><source src="./samples/wsj/clean/15/0.wav"></audio></td>
+    <td class="tg-ihkz"><audio controls=""><source src="./samples/wsj/clean/20/0.wav"></audio></td>
+  </tr>
+  <tr>
+    <td class="tg-pcvp">LSTM</td>
+    <td class="tg-ihkz"><audio controls=""><source src="./samples/wsj/lstm/0/0.wav"></audio></td>
+    <td class="tg-ihkz"><audio controls=""><source src="./samples/wsj/lstm/5/0.wav"></audio></td>
+    <td class="tg-ihkz"><audio controls=""><source src="./samples/wsj/lstm/10/0.wav"></audio></td>
+    <td class="tg-ihkz"><audio controls=""><source src="./samples/wsj/lstm/15/0.wav"></audio></td>
+    <td class="tg-ihkz"><audio controls=""><source src="./samples/wsj/lstm/20/0.wav"></audio></td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">CRN</td>
+    <td class="tg-ihkz"><audio controls=""><source src="./samples/wsj/crn/0/0.wav"></audio></td>
+    <td class="tg-ihkz"><audio controls=""><source src="./samples/wsj/crn/5/0.wav"></audio></td>
+    <td class="tg-ihkz"><audio controls=""><source src="./samples/wsj/crn/10/0.wav"></audio></td>
+    <td class="tg-ihkz"><audio controls=""><source src="./samples/wsj/crn/15/0.wav"></audio></td>
+    <td class="tg-ihkz"><audio controls=""><source src="./samples/wsj/crn/20/0.wav"></audio></td>
+  </tr>
+  <tr>
+    <td class="tg-pcvp">DCCRN-R</td>
+    <td class="tg-ihkz"><audio controls=""><source src="./samples/wsj/dccrn_r/0/0.wav"></audio></td>
+    <td class="tg-ihkz"><audio controls=""><source src="./samples/wsj/dccrn_r/5/0.wav"></audio></td>
+    <td class="tg-ihkz"><audio controls=""><source src="./samples/wsj/dccrn_r/10/0.wav"></audio></td>
+    <td class="tg-ihkz"><audio controls=""><source src="./samples/wsj/dccrn_r/15/0.wav"></audio></td>
+    <td class="tg-ihkz"><audio controls=""><source src="./samples/wsj/dccrn_r/20/0.wav"></audio></td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">DCCRN-C</td>
+    <td class="tg-ihkz"><audio controls=""><source src="./samples/wsj/dccrn_c/0/0.wav"></audio></td>
+    <td class="tg-ihkz"><audio controls=""><source src="./samples/wsj/dccrn_c/5/0.wav"></audio></td>
+    <td class="tg-ihkz"><audio controls=""><source src="./samples/wsj/dccrn_c/10/0.wav"></audio></td>
+    <td class="tg-ihkz"><audio controls=""><source src="./samples/wsj/dccrn_c/15/0.wav"></audio></td>
+    <td class="tg-ihkz"><audio controls=""><source src="./samples/wsj/dccrn_c/20/0.wav"></audio></td>
+
+  </tr>
+  <tr>
+    <td class="tg-pcvp">DCCRN-E</td>
+    <td class="tg-ihkz"><audio controls=""><source src="./samples/wsj/dccrn_e/0/0.wav"></audio></td>
+    <td class="tg-ihkz"><audio controls=""><source src="./samples/wsj/dccrn_e/5/0.wav"></audio></td>
+    <td class="tg-ihkz"><audio controls=""><source src="./samples/wsj/dccrn_e/10/0.wav"></audio></td>
+    <td class="tg-ihkz"><audio controls=""><source src="./samples/wsj/dccrn_e/15/0.wav"></audio></td>
+    <td class="tg-ihkz"><audio controls=""><source src="./samples/wsj/dccrn_e/20/0.wav"></audio></td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">DCCRN-CL</td>
+    <td class="tg-ihkz"><audio controls=""><source src="./samples/wsj/dccrn_cl/0/0.wav"></audio></td>
+    <td class="tg-ihkz"><audio controls=""><source src="./samples/wsj/dccrn_cl/5/0.wav"></audio></td>
+    <td class="tg-ihkz"><audio controls=""><source src="./samples/wsj/dccrn_cl/10/0.wav"></audio></td>
+    <td class="tg-ihkz"><audio controls=""><source src="./samples/wsj/dccrn_cl/15/0.wav"></audio></td>
+    <td class="tg-ihkz"><audio controls=""><source src="./samples/wsj/dccrn_cl/20/0.wav"></audio></td>
+  </tr>
+  <tr>
+    <td class="tg-pcvp">DCUNET</td>
+    <td class="tg-ihkz"><audio controls=""><source src="./samples/wsj/dcunet/0/0.wav"></audio></td>
+    <td class="tg-ihkz"><audio controls=""><source src="./samples/wsj/dcunet/5/0.wav"></audio></td>
+    <td class="tg-ihkz"><audio controls=""><source src="./samples/wsj/dcunet/10/0.wav"></audio></td>
+    <td class="tg-ihkz"><audio controls=""><source src="./samples/wsj/dcunet/15/0.wav"></audio></td>
+    <td class="tg-ihkz"><audio controls=""><source src="./samples/wsj/dcunet/20/0.wav"></audio></td>
+  </tr>
+</tbody>
+</table>
+
+<h2>Part2: DNS test set</h2> 
+<table class="tg" style="undefined;table-layout: fixed; width: 493px">
+<colgroup>
+<col style="width: 85px">
+  <col style="width: 300px">
+  <col style="width: 300px">
+  <col style="width: 300px">
+</colgroup>
+<thead>
+  <tr>
+    <th class="tg-c3ow">Model</th>
+    <th class="tg-c3ow">no-reverb</th>
+      <th class="tg-c3ow">reverb</th>
+    <th class="tg-c3ow">real</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="tg-0pky">Noisy</td> 
+    <td class="tg-ihkz"><audio controls=""><source src="./samples/dns/testset/noisy/clnsp205_wind_407027_1_snr1_tl-24_fileid_170.wav"></audio></td>
+    <td class="tg-ihkz"><audio controls=""><source src="./samples/dns/testset/noisy/clnsp219_wind_344887_0_snr10_tl-28_fileid_96.wav"></audio></td>
+    <td class="tg-ihkz"><audio controls=""><source src="./samples/dns/testset/noisy/audioset_realrec_airconditioner_EO41OusYDkM.wav"></audio></td>
+
+  </tr>
+  <tr>
+    <td class="tg-0pky">NSNet</td>
+    <td class="tg-ihkz"><audio controls=""><source src="./samples/dns/testset/nsnet/clnsp205_wind_407027_1_snr1_tl-24_fileid_170.wav"></audio></td>
+    <td class="tg-ihkz"><audio controls=""><source src="./samples/dns/testset/nsnet/clnsp219_wind_344887_0_snr10_tl-28_fileid_96.wav"></audio></td>
+    <td class="tg-ihkz"><audio controls=""><source src="./samples/dns/testset/nsnet/audioset_realrec_airconditioner_EO41OusYDkM.wav"></audio></td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">DCCRN-E</td>
+    <td class="tg-ihkz"><audio controls=""><source src="./samples/dns/testset/dccrn_e/clnsp205_wind_407027_1_snr1_tl-24_fileid_170.wav"></audio></td>
+    <td class="tg-ihkz"><audio controls=""><source src="./samples/dns/testset/dccrn_e/clnsp219_wind_344887_0_snr10_tl-28_fileid_96.wav"></audio></td>
+    <td class="tg-ihkz"><audio controls=""><source src="./samples/dns/testset/dccrn_e/audioset_realrec_airconditioner_EO41OusYDkM.wav"></audio></td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">DCCRN-E-Aug</td>
+    <td class="tg-ihkz"><audio controls=""><source src="./samples/dns/testset/dccrn_e/clnsp205_wind_407027_1_snr1_tl-24_fileid_170.wav"></audio></td>
+    <td class="tg-ihkz"><audio controls=""><source src="./samples/dns/testset/dccrn_e/clnsp219_wind_344887_0_snr10_tl-28_fileid_96.wav"></audio></td>
+    <td class="tg-ihkz"><audio controls=""><source src="./samples/dns/testset/dccrn_e/audioset_realrec_airconditioner_EO41OusYDkM.wav"></audio></td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">DCCRN-CL</td>
+    <td class="tg-ihkz"><audio controls=""><source src="./samples/dns/testset/dccrn_cl/clnsp205_wind_407027_1_snr1_tl-24_fileid_170.wav"></audio></td>
+    <td class="tg-ihkz"><audio controls=""><source src="./samples/dns/testset/dccrn_cl/clnsp219_wind_344887_0_snr10_tl-28_fileid_96.wav"></audio></td>
+    <td class="tg-ihkz"><audio controls=""><source src="./samples/dns/testset/dccrn_cl/audioset_realrec_airconditioner_EO41OusYDkM.wav"></audio></td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">DCUNET</td>
+    <td class="tg-ihkz"><audio controls=""><source src="./samples/dns/testset/dcunet/clnsp205_wind_407027_1_snr1_tl-24_fileid_170.wav"></audio></td>
+    <td class="tg-ihkz"><audio controls=""><source src="./samples/dns/testset/dcunet/clnsp219_wind_344887_0_snr10_tl-28_fileid_96.wav"></audio></td>
+    <td class="tg-ihkz"><audio controls=""><source src="./samples/dns/testset/dcunet/audioset_realrec_airconditioner_EO41OusYDkM.wav"></audio></td>
+  </tr>
+</tbody>
+</table> 
+  
+<h2>Part3: DNS blind set</h2>  
+  <table class="tg" style="undefined;table-layout: fixed; width: 493px">
+  <colgroup>
+  <col style="width: 85px">
+  <col style="width: 300px">
+  <col style="width: 300px">
+  <col style="width: 300px">
+  </colgroup>
+  <thead>
+    <tr>
+      <th class="tg-c3ow">Model</th>
+      <th class="tg-c3ow">no-reverb</th>
+      <th class="tg-c3ow">reverb</th>
+      <th class="tg-c3ow">real</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="tg-0pky">Noisy</td>
+    <td class="tg-ihkz"><audio controls=""><source src="./samples/dns/blindset/noisy/noreverb_fileid_6.wav"></audio></td>
+    <td class="tg-ihkz"><audio controls=""><source src="./samples/dns/blindset/noisy/reverb_fileid_146.wav"></audio></td>
+    <td class="tg-ihkz"><audio controls=""><source src="./samples/dns/blindset/noisy/realrec_fileid_211.wav"></audio></td>
+    </tr>
+  <tr>
+    <td class="tg-0pky">NSNet</td>
+    <td class="tg-ihkz"><audio controls=""><source src="./samples/dns/blindset/nsnet/noreverb_fileid_6.wav"></audio></td>
+    <td class="tg-ihkz"><audio controls=""><source src="./samples/dns/blindset/nsnet/reverb_fileid_146.wav"></audio></td>
+    <td class="tg-ihkz"><audio controls=""><source src="./samples/dns/blindset/nsnet/realrec_fileid_211.wav"></audio></td>
+  </tr>
+    <tr>
+      <td class="tg-0pky">DCCRN-E</td>
+    <td class="tg-ihkz"><audio controls=""><source src="./samples/dns/blindset/dccrn_e/noreverb_fileid_6.wav"></audio></td>
+    <td class="tg-ihkz"><audio controls=""><source src="./samples/dns/blindset/dccrn_e/reverb_fileid_146.wav"></audio></td>
+    <td class="tg-ihkz"><audio controls=""><source src="./samples/dns/blindset/dccrn_e/realrec_fileid_211.wav"></audio></td>
+    </tr>
+    <tr>
+      <td class="tg-0pky">DCCRN-E-Aug</td>
+    <td class="tg-ihkz"><audio controls=""><source src="./samples/dns/blindset/dccrn_e_aug/noreverb_fileid_6.wav"></audio></td>
+    <td class="tg-ihkz"><audio controls=""><source src="./samples/dns/blindset/dccrn_e_aug/reverb_fileid_146.wav"></audio></td>
+    <td class="tg-ihkz"><audio controls=""><source src="./samples/dns/blindset/dccrn_e_aug/realrec_fileid_211.wav"></audio></td>
+    </tr>
+  </tbody>
+  </table>
