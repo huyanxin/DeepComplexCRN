@@ -19,7 +19,7 @@ class DCCRN(nn.Module):
                     win_len=400,
                     win_inc=100, 
                     fft_len=512,
-                    win_type='hanning',
+                    win_type='hann',
                     masking_mode='E',
                     use_clstm=False,
                     use_cbn = False,

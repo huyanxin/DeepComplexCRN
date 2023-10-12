@@ -109,7 +109,7 @@ def test_fft():
     win_inc = 160 
     fft_len = 512
     inputs = torch.randn([1, 1, 16000*4])
-    fft = ConvSTFT(win_len, win_inc, fft_len, win_type='hanning', feature_type='real')
+    fft = ConvSTFT(win_len, win_inc, fft_len, win_type='hann', feature_type='real')
     import librosa
 
     outputs1 = fft(inputs)[0]
@@ -128,8 +128,8 @@ def test_ifft1():
     data = np.random.randn(16000*8)[None,None,:]
 #    data = sf.read('../ori.wav')[0]
     inputs = data.reshape([1,1,-1])
-    fft = ConvSTFT(N, inc, fft_len=fft_len, win_type='hanning', feature_type='complex')
-    ifft = ConviSTFT(N, inc, fft_len=fft_len, win_type='hanning', feature_type='complex')
+    fft = ConvSTFT(N, inc, fft_len=fft_len, win_type='hann', feature_type='complex')
+    ifft = ConviSTFT(N, inc, fft_len=fft_len, win_type='hann', feature_type='complex')
     inputs = torch.from_numpy(inputs.astype(np.float32))
     outputs1 = fft(inputs)
     print(outputs1.shape) 
@@ -149,8 +149,8 @@ def test_ifft2():
     #input = torch.randn([1,16000*4]) 
     input = torch.from_numpy(t[None,None,:].astype(np.float32))
     
-    fft = ConvSTFT(N, inc, fft_len=fft_len, win_type='hanning', feature_type='complex')
-    ifft = ConviSTFT(N, inc, fft_len=fft_len, win_type='hanning', feature_type='complex')
+    fft = ConvSTFT(N, inc, fft_len=fft_len, win_type='hann', feature_type='complex')
+    ifft = ConviSTFT(N, inc, fft_len=fft_len, win_type='hann', feature_type='complex')
     
     out1 = fft(input)
     output = ifft(out1)
